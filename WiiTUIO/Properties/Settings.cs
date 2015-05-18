@@ -71,7 +71,7 @@ namespace WiiTUIO.Properties
             }
         }
 
-        private bool _minimizeOnStart = false;
+        private bool _minimizeOnStart = true;
         public bool minimizeOnStart
         {
             get { return _minimizeOnStart; }
@@ -82,7 +82,7 @@ namespace WiiTUIO.Properties
             }
         }
 
-        private bool _minimizeToTray = false;
+        private bool _minimizeToTray = true;
         public bool minimizeToTray
         {
             get { return _minimizeToTray; }
@@ -247,7 +247,7 @@ namespace WiiTUIO.Properties
             }
         }
 
-        private double _pointer_cursorSize = 0.04;
+        private double _pointer_cursorSize = 0.03;
         public double pointer_cursorSize
         {
             get { return _pointer_cursorSize; }
@@ -258,7 +258,7 @@ namespace WiiTUIO.Properties
             }
         }
 
-        private double _pointer_marginsTopBottom = 0.8;
+        private double _pointer_marginsTopBottom = 0.3;
         public double pointer_marginsTopBottom
         {
             get { return _pointer_marginsTopBottom; }
@@ -269,7 +269,7 @@ namespace WiiTUIO.Properties
             }
         }
 
-        private double _pointer_marginsLeftRight = 0.7;
+        private double _pointer_marginsLeftRight = 0.2;
         public double pointer_marginsLeftRight
         {
             get { return _pointer_marginsLeftRight; }
@@ -336,7 +336,7 @@ namespace WiiTUIO.Properties
             }
         }
 
-        private int _pointer_FPS = 80;
+        private int _pointer_FPS = 100;
         public int pointer_FPS
         {
             get { return _pointer_FPS; }
@@ -358,7 +358,7 @@ namespace WiiTUIO.Properties
             }
         }
 
-        private int _touch_touchTapThreshold = 40;
+        private int _touch_touchTapThreshold = 55;
         public int touch_touchTapThreshold
         {
             get { return _touch_touchTapThreshold; }
