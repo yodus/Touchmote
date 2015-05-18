@@ -208,8 +208,8 @@ namespace WiiTUIO
             this.canvasAbout.Children.Add(aboutpanel);
 
             Loaded += MainWindow_Loaded;
-
-            checkNewVersion();
+            if (Settings.Default.checkNewVersion)
+                checkNewVersion();
         }
 
         private HttpWebRequest wrGETURL;

@@ -49,6 +49,17 @@ namespace WiiTUIO.Properties
             }
         }
 
+        private bool _checkNewVersion = false;
+        public bool checkNewVersion
+        {
+            get { return _pairOnStart; }
+            set
+            {
+                _checkNewVersion = value;
+                OnPropertyChanged("checkNewVersion");
+            }
+        }
+
         private bool _connectOnStart = true;
         public bool connectOnStart
         {
@@ -377,6 +388,17 @@ namespace WiiTUIO.Properties
             {
                 _touch_edgeGestureHelperRelease = value;
                 OnPropertyChanged("touch_edgeGestureHelperRelease");
+            }
+        }
+
+        private bool _rumbleOnConnect = false;
+        public bool rumbleOnConnect
+        {
+            get { return _rumbleOnConnect; }
+            set
+            {
+                _rumbleOnConnect = value;
+                OnPropertyChanged("rumbleOnConnect");
             }
         }
         
