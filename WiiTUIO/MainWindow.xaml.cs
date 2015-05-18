@@ -269,7 +269,7 @@ namespace WiiTUIO
 
         private void windowsShutdownEvent(object sender, SessionEndingCancelEventArgs e)
         {
-            Settings.Default.Save();
+            //Settings.Default.Save();
         }
 
         private void AboutPanel_OnClose()
