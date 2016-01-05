@@ -520,6 +520,11 @@ namespace WiiTUIO.Provider
                             if (eventBuffer.ContainsKey(control.Wiimote.HIDDevicePath))
                             {
                                 WiimoteChangedEventArgs e = eventBuffer[control.Wiimote.HIDDevicePath];
+                                //Quick fix for dolphinbar
+                                if (!control.Status.InPowerSave && e.WiimoteState.InputReport == InputReport.Buttons)
+                                {
+                                    this.putToPowerSave(control);
+                                }
 
                                 if (control.handleWiimoteChanged(this, e) && control.Status.InPowerSave)
                                 {
