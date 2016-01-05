@@ -304,7 +304,10 @@ namespace WiiTUIO.Provider
             wiimote.Connect();
             wiimote.SetReportType(InputReport.IRExtensionAccel, IRSensitivity.Maximum, true);
 
-            new Timer(new TimerCallback(connectRumble), wiimote, 0, Timeout.Infinite);
+            if (Settings.Default.rumbleOnConnect)
+            {
+                new Timer(new TimerCallback(connectRumble), wiimote, 0, Timeout.Infinite);
+            }
 
             int id = this.getFirstFreeId();
             wiimote.SetLEDs(id == 1, id == 2, id == 3, id == 4);
@@ -376,7 +379,10 @@ namespace WiiTUIO.Provider
                 int id = control.Status.ID;
                 control.Wiimote.SetLEDs(id == 1, id == 2, id == 3, id == 4);
                 control.Wiimote.SetRumble(true);
-                new Timer(connectRumble,control.Wiimote,0,Timeout.Infinite);
+                if (Settings.Default.rumbleOnConnect)
+                {
+                    new Timer(connectRumble, control.Wiimote, 0, Timeout.Infinite);
+                }
             }
             catch { }
             finally

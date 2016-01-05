@@ -16,6 +16,39 @@ namespace WiiTUIO.Properties
 
         public event PropertyChangedEventHandler PropertyChanged;
 
+        private bool _saveOnExit = false;
+        public bool saveOnExit
+        {
+            get { return _saveOnExit; }
+            set
+            {
+                _saveOnExit = value;
+                OnPropertyChanged("saveOnExit");
+            }
+        }
+
+        private bool _checkNewVersion = false;
+        public bool checkNewVersion
+        {
+            get { return _checkNewVersion; }
+            set
+            {
+                _checkNewVersion = value;
+                OnPropertyChanged("checkNewVersion");
+            }
+        }
+
+        private bool _rumbleOnConnect = false;
+        public bool rumbleOnConnect
+        {
+            get { return _rumbleOnConnect; }
+            set
+            {
+                _rumbleOnConnect = value;
+                OnPropertyChanged("rumbleOnConnect");
+            }
+        }
+
         private string _input = "multipointer";
         public string input
         {
@@ -60,7 +93,7 @@ namespace WiiTUIO.Properties
             }
         }
 
-        private bool _minimizeOnStart = false;
+        private bool _minimizeOnStart = true;
         public bool minimizeOnStart
         {
             get { return _minimizeOnStart; }
@@ -71,7 +104,7 @@ namespace WiiTUIO.Properties
             }
         }
 
-        private bool _minimizeToTray = false;
+        private bool _minimizeToTray = true;
         public bool minimizeToTray
         {
             get { return _minimizeToTray; }

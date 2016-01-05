@@ -44,7 +44,10 @@ namespace WiiTUIO
         {
             if (e.ApplicationExitCode != 220)
             {
-                WiiTUIO.Properties.Settings.Default.Save();
+                if (WiiTUIO.Properties.Settings.Default.saveOnExit)
+                {
+                    WiiTUIO.Properties.Settings.Default.Save();
+                }
                 //TB.Dispose();
                 SystemProcessMonitor.Default.Dispose();
             }

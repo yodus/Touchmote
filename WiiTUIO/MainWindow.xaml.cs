@@ -205,7 +205,10 @@ namespace WiiTUIO
 
             Loaded += MainWindow_Loaded;
 
-            checkNewVersion();
+            if (WiiTUIO.Properties.Settings.Default.checkNewVersion)
+            {
+                checkNewVersion();
+            }
 
             if (Settings.Default.disconnectWiimotesOnDolphin)
             {
@@ -285,7 +288,10 @@ namespace WiiTUIO
 
         private void windowsShutdownEvent(object sender, SessionEndingCancelEventArgs e)
         {
-            Settings.Default.Save();
+            if (WiiTUIO.Properties.Settings.Default.saveOnExit)
+            {
+                Settings.Default.Save();
+            }
         }
 
         private void AboutPanel_OnClose()
