@@ -291,7 +291,7 @@ namespace WiiTUIO.Properties
             }
         }
         
-        private double _pointer_marginsTopBottom = 0.5;
+        private double _pointer_marginsTopBottom = 0.4;
         public double pointer_marginsTopBottom
         {
             get { return _pointer_marginsTopBottom; }
@@ -302,7 +302,7 @@ namespace WiiTUIO.Properties
             }
         }
         
-        private double _pointer_marginsLeftRight = 0.4;
+        private double _pointer_marginsLeftRight = 0.3;
         public double pointer_marginsLeftRight
         {
             get { return _pointer_marginsLeftRight; }

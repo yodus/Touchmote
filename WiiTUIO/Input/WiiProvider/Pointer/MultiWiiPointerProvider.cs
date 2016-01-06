@@ -378,9 +378,9 @@ namespace WiiTUIO.Provider
                 control.Status.InPowerSave = false;
                 int id = control.Status.ID;
                 control.Wiimote.SetLEDs(id == 1, id == 2, id == 3, id == 4);
-                control.Wiimote.SetRumble(true);
                 if (Settings.Default.rumbleOnConnect)
                 {
+                    control.Wiimote.SetRumble(true);
                     new Timer(connectRumble, control.Wiimote, 0, Timeout.Infinite);
                 }
             }
